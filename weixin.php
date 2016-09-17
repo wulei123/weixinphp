@@ -4,7 +4,7 @@
 	$nonce = $_GET['nonce'];
 	$token = 'weixin';
 	$signature = $_GET['signature'];
-	$array = [timestamp,nonce,signature];
+	$array = [$timestamp,$token,$nonce];
 	sort($array);
 	$tmpstr = implode('',$array);
 	$tmpstr = sha1($tmpstr);
